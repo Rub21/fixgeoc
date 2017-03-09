@@ -8,7 +8,6 @@ module.exports = {
 		var quality_local_casper = JSON.parse(fs.readFileSync(file, 'utf8'));
 		_.each(addobjs, function(v, k) {
 			quality_local_casper[k] = v;
-
 		});
 		fs.writeFile(file, JSON.stringify(quality_local_casper), function(err) {
 			if (err) {
@@ -21,7 +20,6 @@ module.exports = {
 		var quality_local_casper = JSON.parse(fs.readFileSync(file, 'utf8'));
 		console.log(JSON.stringify(quality_local_casper));
 	},
-
 	merge: function(master, branch) {
 		master = JSON.parse(master);
 		branch = JSON.parse(branch);
@@ -34,11 +32,9 @@ module.exports = {
 		var sort = _.sortBy(_.keys(branch), function(obj) {
 			return +obj
 		});
-
 		for (var i = 0; i < sort.length; i++) {
 			merge[sort[i]] = branch[sort[i]];
 		}
 		console.log(JSON.stringify(merge))
 	}
-
 }

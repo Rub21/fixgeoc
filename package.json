@@ -3,19 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "bin": {
-    "fix": "index.js"
+  "bin": {
+    "fixgeoc": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Rub21",
   "license": "ISC",
-    "dependencies": {
-    "fast-csv": "^2.3.1",
-    "fast-levenshtein": "^2.0.6",
+  "dependencies": {
     "minimist": "^1.2.0",
-    "underscore": "^1.8.3",
-    "xlsx": "^0.8.6"
+    "underscore": "^1.8.3"
   }
 }

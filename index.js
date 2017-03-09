@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var join = require('./join');
-var coords = require('./coords');
+var join = require('./src/join');
+var coords = require('./src/coords');
 var argv = require('minimist')(process.argv.slice(2));
 var action = argv._[0];
 switch (action) {
@@ -15,7 +15,7 @@ switch (action) {
 		join.get();
 		break;
 	case 'merge':
-		join.merge(argv.master,argv.branch);
+		join.merge(argv.master, argv.branch);
 		break;
 	default:
 		console.log('unknown command');
